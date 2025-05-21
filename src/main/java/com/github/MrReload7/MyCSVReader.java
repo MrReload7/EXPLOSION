@@ -6,7 +6,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.List;
 
-public class CSVReader {
+public class MyCSVReader {
     public static void main(String [] args){
 
         String file = "worldcities.csv";
