@@ -8,6 +8,10 @@
 	<name>EXPLODE</name>
 	<description>Ghetto nukemap</description>
 
+	<properties>
+		<exec.mainClass>com.github.MrReload7.MyCSVReader</exec.mainClass>
+	</properties>
+
 	<dependencies>
 		<dependency>
 			<groupId>com.opencsv</groupId>
