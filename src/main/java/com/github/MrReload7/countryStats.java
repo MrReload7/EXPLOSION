@@ -18,4 +18,12 @@ public class countryStats {
         }
         return null;
      }
+
+     public String showCities(){
+        String ret = "";
+        for(int i = 0; i < cities.size(); i++){
+            ret += cities.get(i).getName() + " Population: " + cities.get(i).getPop();
+        }
+        return ret;
+     }
 }
