@@ -22,7 +22,7 @@ public class countryStats {
      public String showCities(){
         String ret = "";
         for(int i = 0; i < cities.size(); i++){
-            ret += cities.get(i).getName() + " Population: " + cities.get(i).getPop();
+            ret += cities.get(i).getName() + "| Population: " + cities.get(i).getPop() + "\n";
         }
         return ret;
      }

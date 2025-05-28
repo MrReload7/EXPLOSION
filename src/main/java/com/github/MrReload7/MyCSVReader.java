@@ -1,7 +1,6 @@
 package com.github.MrReload7;
 
 import com.opencsv.CSVReader;
-import com.opencsv.exceptions.CsvException;
 import com.opencsv.exceptions.CsvValidationException;
 
 import java.io.FileNotFoundException;
@@ -11,9 +10,11 @@ import java.util.Scanner;
 
 public class MyCSVReader {
     public static void main(String [] args){
-
+        nukeCalc calc = new nukeCalc();
         countryStats country = new countryStats();
-        Scanner input = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
+        Scanner scan = new Scanner(System.in);
+        Scanner scanned = new Scanner(System.in);
         System.out.println("Welcome to ghetto Nukemap! Please consult the README file for how to use this program.\nPlease select a country.");
         String file = "worldcities.csv";
         FileReader fr;
@@ -25,24 +26,42 @@ public class MyCSVReader {
             return;
         }
         CSVReader reader = new CSVReader(fr);
+        String input = scanner.nextLine();
         String [] nextLine;
         try {
             while ((nextLine = reader.readNext()) != null) {
-
-                if(nextLine[0].equals(input)){
+                
+                if(nextLine[4].equals(input)){    
                     String str = nextLine[9];
                     int num = Integer.parseInt(str);
-                    country.addCity(new cityStats(nextLine[0], num));
+                    if (num >= 100000){                    
+                        country.addCity(new cityStats(nextLine[0], num));
+                    }
                 }
             }
         } catch (CsvValidationException e) {
             e.printStackTrace();
         } catch (NumberFormatException e) {
-
             e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         }
-        System.out.print(country.showCities());
-}
+        System.out.println(country.showCities());
+        System.out.println("Select a city.");
+        input = scanner.nextLine();
+
+        System.out.println("Select a yeild (in tons of TNT)");
+        String inp = scan.nextLine();
+        int number = Integer.parseInt(inp);
+        System.out.println("Select a population density (consult README)");
+        String dens = scanned.nextLine();
+        int density = Integer.parseInt(dens);
+
+        int cas = calc.getCasualties(number,density);
+        int perCas = (country.getCity(input).getPop() / cas)*100;
+        System.out.println("Casualties: " + cas);
+        System.out.println("Percentage Casualties: " + perCas);
+        System.out.println("Homes Destroyed: ");
+        System.out.println("International Incedents: 1");
+}       
 }
