@@ -50,18 +50,18 @@ public class MyCSVReader {
         System.out.println("Select a city.");
         input = scanner.nextLine();
 
-        System.out.println("Select a yeild (in tons of TNT)");
+        System.out.println("Select a yeild (in kilotons of TNT)");
         String inp = scan.nextLine();
         int number = Integer.parseInt(inp);
         System.out.println("Select a population density (consult README)");
         String dens = scanned.nextLine();
-        int density = Integer.parseInt(dens);
+        double density = Integer.parseInt(dens);
 
-        int cas = calc.getCasualties(number,density);
-        int perCas = (country.getCity(input).getPop() / cas)*100;
-        System.out.println("Casualties: " + cas);
+        double cas = calc.getCasualties(number,density);
+        int perCas = (country.getCity(input).getPop() / (int)(cas))*100;
+        System.out.println("Casualties: " + (int)cas);
         System.out.println("Percentage Casualties: " + perCas + "%");
-        System.out.println("Homes Destroyed: ");
+        System.out.println("Homes Destroyed: " + (int)cas/4);
         System.out.println("International Incedents: 1");
 }       
 }
