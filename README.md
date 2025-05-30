@@ -31,7 +31,7 @@ From there, you will be asked a number of questions in the following sequence:
 
 With all of this data, you will be provided with the following statistics:
 
-* Casualties: How many people died instantly, in a flat number.
+* Casualties: How many people died instantly, in a flat number. All casualties counts assume air burst detonations.
 
 * Percentage Casualties: How many fatalities there were, as a percentage of the population of the chosen city.
 
