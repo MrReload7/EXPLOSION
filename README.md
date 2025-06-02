@@ -27,11 +27,11 @@ From there, you will be asked a number of questions in the following sequence:
 
 * Yeild: This is the power of your bomb in kilotons (thousands of tons) of tnt. Tactical nukes range from 1-100 kilotons, and strategic "city busters" are usually around 1,000 kilotons, but can get all the way up to 50,000, like in the case of the Tzar Bomba.
 
-* Density: In people per square kilometer. Because I don't want to pay $200 or input the population density information for the 14,800 cities in this database, you will put in the city density manually. You can either look up the density of the aformentioned city, or use this rule of thumb: "Sprawl-type" cities range from 2000-3000 people per square kilometer, all the way up to over 100,000, like in the case of New York City. Most cities are around the 5000 people per square kilometer mark. Choose appropriately.
+* Density: In people per square kilometer. Because I don't want to pay $200 or input the population density information for the 48,000 cities in this database, you will put in the city density manually. You can either look up the density of the aformentioned city, or use this rule of thumb: "Sprawl-type" cities range from 2000-3000 people per square kilometer, all the way up to over 100,000, like in the case of New York City. Most cities are around the 5000 people per square kilometer mark. Choose appropriately.
 
 With all of this data, you will be provided with the following statistics:
 
-* Casualties: How many people died instantly, in a flat number. All casualties counts assume air burst detonations.
+* Casualties: How many people died within the first minute or so, in a flat number. All casualties counts assume air burst detonations and that 50% of people within the blast zones become casualties.
 
 * Percentage Casualties: How many fatalities there were, as a percentage of the population of the chosen city.
 
