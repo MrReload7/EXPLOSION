@@ -58,7 +58,7 @@ public class MyCSVReader {
         double density = Integer.parseInt(dens);
 
         double cas = calc.getCasualties(number,density);
-        int perCas = (country.getCity(input).getPop() / (int)(cas))/100;
+        double perCas = (country.getCity(input).getPop() / (cas))/100;
         System.out.println("Casualties: " + (int)cas);
         System.out.println("Percentage Casualties: " + perCas + "%");
         System.out.println("Homes Destroyed: " + (int)cas/4);
